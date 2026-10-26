@@ -37,7 +37,7 @@ const now = new Date();
 const seoulParts = new Intl.DateTimeFormat('en', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(now);
 const seoulDate = Object.fromEntries(seoulParts.map(({ type, value }) => [type, value]));
 const today = document.getElementById('today');
-today.dateTime = ${seoulDate.year}--;
+today.dateTime = seoulDate.year + '-' + seoulDate.month + '-' + seoulDate.day;
 today.textContent = new Intl.DateTimeFormat('ko-KR', { timeZone: 'Asia/Seoul', dateStyle: 'full' }).format(now);
 (()=>{
  const key='seo-yongsik-career-v1';
